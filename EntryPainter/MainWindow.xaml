@@ -7,10 +7,52 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1024">
     <Grid>
-        <Canvas  Name="paintSurface" MouseDown="paintSurface_MouseDown"  MouseMove="paintSurface_MouseMove">
-            <Canvas.Background>
-                <SolidColorBrush Color="White" Opacity="0"/>
-            </Canvas.Background>
-        </Canvas>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="17*" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" >
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" />
+                <MenuItem Header="_Open" />
+                <MenuItem Header="_Save" />
+                <Separator />
+                <MenuItem Header="_Exit" />
+            </MenuItem>
+        </Menu>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <!-- Insert 1)Tools 2)Tools properties-->
+            <Button >Test</Button>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Canvas  Name="paintSurface" MouseDown="paintSurface_MouseDown"  MouseMove="paintSurface_MouseMove">
+                <Canvas.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </Canvas.Background>
+            </Canvas>
+        </Grid>
+
+
+        <Grid Grid.Row="1" Grid.Column="2">
+            <!-- Insert 1)Color picker 2)Layer Settings 3) Screenshot of current layer-->
+            <Button >Test</Button>
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <!-- Insert Layers-->
+            <Button >Test</Button>
+        </Grid>
+
     </Grid>
 </Window>
